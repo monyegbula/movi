@@ -1,0 +1,148 @@
+$shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+$primarygray:  rgb(226, 226, 226);
+$primaryblue:  rgb(41, 161, 145);
+$radius: 3px;
+
+body {
+    background: grey;
+    @media (max-width: 550px) {
+        background: $primarygray;
+    }
+}
+
+.navbar-wrapper {
+    justify-content: center;
+    display: flex;
+    .navbar {
+        max-height: 100px;
+        background: $primarygray;
+        box-shadow: $shadow;
+        display: flex;
+        width: 80%;
+        position: static;
+        justify-content: center;
+        border-radius: $radius;
+    
+        .search-box-wrapper {
+            width: 35%;
+            display: flex;
+            @media (max-width: 550px) {
+                width: 100%;
+            }
+            
+        
+            .search-box {
+                border: chartreuse;
+                padding: 0;
+                margin: 0;
+                height: 50px;
+                flex: 3;
+                text-align: center;
+                font-size: 20px;
+                outline: none;
+                
+                :hover {
+                    background: none;
+
+                }
+            
+            }
+            .btn :hover {
+                color: $primaryblue;
+                font-size: 40px;
+            }
+            .btn {
+                flex: 0.5;
+                margin: 0;
+                outline: none;
+                
+            }
+        }
+        
+    }
+}
+
+
+.all-page-content {
+    justify-content: center;
+    margin: 10%;
+    background: $primarygray;
+    border-radius: $radius;
+    
+    .text {
+        flex: 1;
+        text-align: center;
+        color: $primaryblue;
+        text-decoration: underline;
+        font-style: italic;
+        margin: auto;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+
+    .movie-container {
+        padding: 5%;
+        @media (min-width: 1200px) {
+            display: flex;
+            box-shadow: $shadow;
+
+        }
+      
+        
+        .movie-data{
+            height:250px;
+            width: 400px;
+            display: flex;
+            padding: 10px;
+            margin: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: $shadow;
+            border-radius: $radius;
+            @media (max-width: 550px) {
+                max: height 400px;
+                max-width: 300px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+        .movie-poster {
+            flex: 2;
+            padding-right: 10px;
+            @media (max-width: 400px) {
+                max-width: 180px;
+                max-height: 110px;
+                padding-right: 0;
+            }
+            
+        }
+        .movie-poster:hover{
+            image-rendering: pixelated;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .movie-atributes {
+            list-style: none;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 25px;
+            text-decoration: none;
+            @media (max-width: 600px) {
+                font-size: 11.5px;
+                line-height: 15px;
+                padding-left: 2px;
+                margin-left: 2px;
+            }
+            
+        }
+        .movie-name {
+            font-size: larger;
+            font-weight: bolder;
+            text-decoration: underline;
+            color:$primaryblue;
+        }
+        
+    
+    }
+
+    
+    
+}
